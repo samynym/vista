@@ -1,0 +1,33 @@
+name: Hosted Vista waitlist
+description: Tell us you'd use a hosted version of Vista, so you don't have to run it yourself.
+title: "Waitlist: "
+labels: ["waitlist"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! A hosted Vista would connect your banks for you, with no API keys to set up. This issue is public, so don't share account details.
+  - type: input
+    id: countries
+    attributes:
+      label: Where are your accounts?
+      description: Countries, e.g. France, South Africa, UK.
+    validations:
+      required: true
+  - type: textarea
+    id: institutions
+    attributes:
+      label: Which banks, brokers or wallets would you connect?
+      placeholder: e.g. Revolut, Investec, Interactive Brokers, Trezor
+  - type: dropdown
+    id: price
+    attributes:
+      label: What would you pay per month for a hosted household plan?
+      options:
+        - Nothing, I'd only use it free
+        - Up to €5
+        - €5–10
+        - €10–20
+        - More than €20
+    validations:
+      required: true
